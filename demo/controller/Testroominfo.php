@@ -9,6 +9,9 @@
 
 namespace app\index\controller;
 
+use Cplife\getAopClientValue;
+use Cplife\Roominfo;
+
 class Testroominfo extends Base
 {
     /**

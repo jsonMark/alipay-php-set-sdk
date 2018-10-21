@@ -7,7 +7,11 @@
  * Q  Q: 3401889728
  */
 
-namespace app\index\controller;
+namespace app\demo\controller;
+
+use Alipay\Request\AlipayEcoCplifeCommunityCreateRequest;
+use Cplife\getAopClientValue;
+use Cplife\Community;
 
 class Test extends Base
 {
@@ -16,6 +20,7 @@ class Test extends Base
      */
     public function TestCommunityCreate()
     {
+        //echo "123";die;
         $data  = array(
             'community_name'=>'武昌站',    //community_id = AMLJJVEZH4201
             'community_address'=>'武昌区中山路574号',
@@ -28,9 +33,12 @@ class Test extends Base
             'out_community_id'=>'1',
         );
         $app_auth_token = '201810BBb7dfdaa1d0de47eab10c661ce05eaX03';
-        $aopVal = new getAopClientValue();
+        $aopVal = new  getAopClientValue();
+        //$aopVal = new \Cplife\getAopClientValue();
+        //$aopVal = new getAopClientValue();
 
         $community = new Community();
+        //$community = new Community();
         $result = $community->communityCreate($aopVal, $data, $app_auth_token);
         $this->show_bug($result);
     }

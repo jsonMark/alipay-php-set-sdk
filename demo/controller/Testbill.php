@@ -9,6 +9,8 @@
 
 namespace app\index\controller;
 
+use Cplife\getAopClientValue;
+use Cplife\Bill;
 
 class Testbill extends Base
 {
